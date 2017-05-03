@@ -1,10 +1,40 @@
 <ion-view title="First Section">
     <ion-nav-buttons side="left">
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-        <button class="button button-icon icon right ion-plus"></button>
     </ion-nav-buttons>
     <ion-content has-header="true" padding="true">
-        <h3>First Section's home</h3> <a class="button button-halfwidth" nav-clear ui-sref="root">Back to the Root</a> <a class="button button-halfwidth pull-right" nav-clear ui-sref="snd.home">Second Section</a> </ion-content>
+        <h3>My devices</h3> <a class="button button-halfwidth" nav-clear ui-sref="root">Back to the Root</a> <a class="button button-halfwidth pull-right" nav-clear ui-sref="snd.home">Second Section</a>
+
+    <div class="row header">
+          <div class="col text-center">Name</div>
+          <div class="col text-center">Type</div>
+          <div class="col text-center">Capacity</div>
+          <div class="col text-center">Area</div>
+          <div class="col text-center">Edit</div>
+          <div class="col text-center">Delete</div>
+
+        </div>
+        <div class="row" ng-repeat="data in data.devices">
+          <div class="col">{{data.name}}</div>
+          <div class="col">{{data.type}}</div>
+          <div class="col">{{data.capacity}}</div>
+          <div class="col">{{data.area}}</div>
+            <div class="col text-center"><i class="icon ion-edit"></i></div>
+            <div class="col text-center"><i class="icon ion-close-round"></i></div>
+        </div>
+        <br/>
+        <div class="row" ng-repeat="data in data.sensors">
+          <div class="col">{{data.name}}</div>
+          <div class="col">{{data.type}}</div>
+          <div class="col">{{data.capacity}}</div>
+          <div class="col">{{data.area}}</div>
+          <div class="col text-center"><i class="icon ion-edit"></i></div>
+          <div class="col text-center"><i class="icon ion-close-round"></i></div>
+
+        </div>
+
+    </ion-content>
+
     <div class="bar bar-footer bar-balanced">
         <div class="button-bar">
             <button class="button button-small button-assertive"> Add device </button>

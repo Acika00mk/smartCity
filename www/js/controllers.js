@@ -2,6 +2,9 @@ smart
     .controller('RootPageController', function ($scope, $ionicSideMenuDelegate, model) {
     
     model.sayHello();
+
+    $scope.data = model.getModel();
+
         
     })
 
@@ -11,7 +14,9 @@ smart
         };
     })
     .controller('FstController', function ($scope, $ionicSideMenuDelegate) {})
-    .controller('FstHomePageController', function ($scope, $ionicSideMenuDelegate) {})
+    .controller('FstHomePageController', function ($scope, $ionicSideMenuDelegate, model) {
+    $scope.data = model.getModel();
+})
     .controller('FstFirstPageController', function ($scope, $ionicSideMenuDelegate) {})
     .controller('FstSecondPageController', function ($scope, $ionicSideMenuDelegate) {})
 
