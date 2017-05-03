@@ -1,0 +1,27 @@
+<ion-view title="Welcome">
+    <ion-content has-header="true" padding="true" class="root">
+        <!--
+        <a class="button button-halfwidth" nav-clear ui-sref="fst.home">First Section</a>
+        <a class="button button-halfwidth pull-right" nav-clear ui-sref="snd.home">Second Section</a>
+-->
+        <div class="form">
+            <div id="login">
+                <h1>Welcome</h1>
+                <form action="http://172.104.130.4/index.php/users/login" method="post">
+                    <div class="list">
+                        <label class="item item-input item-floating-label">
+                            <span class="input-label">Email adress</span>
+                            <input type="text" placeholder="Email address">
+                        </label>
+                        <label class="item item-input item-floating-label">
+                            <span class="input-label">Email</span>
+                            <input type="text" placeholder="Email">
+                        </label>
+                    </div>
+                    <p class="forgot"><a href="#">Forgot Password?</a></p>
+                    <button ui-sref="fst.home" class="button button-block   whiteButton">Log In</button>
+                </form>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
