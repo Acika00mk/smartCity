@@ -1,9 +1,11 @@
 <ion-view title="First Section">
     <ion-nav-buttons side="left">
         <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-    </ion-nav-buttons>
-    <ion-content has-header="true" padding="true">
-        <h3>My devices</h3> <a class="button button-halfwidth" nav-clear ui-sref="root">Back to the Root</a> <a class="button button-halfwidth pull-right" nav-clear ui-sref="snd.home">Second Section</a>
+</ion-nav-buttons>
+    <ion-content has-header="true" padding="true" has-footer="true">
+        <h3>My devices</h3>
+        <a class="button button-halfwidth" nav-clear ui-sref="root">Back to the Root</a>
+        <a class="button button-halfwidth pull-right" nav-clear ui-sref="snd.home">Second Section</a>
 
     <div class="row header">
           <div class="col text-center">Name</div>
@@ -37,8 +39,8 @@
 
     <div class="bar bar-footer bar-balanced">
         <div class="button-bar">
-            <button class="button button-small button-assertive"> Add device </button>
-            <button class="button button-large button-positive"> Add sensor </button>
+            <button class="button button-small button-assertive"  nav-clear ui-sref="add.device"> Add device </button>
+            <button class="button button-large button-positive"  nav-clear ui-sref="add.sensor"> Add sensor </button>
         </div>
     </div>
 </ion-view>

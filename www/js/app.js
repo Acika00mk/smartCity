@@ -43,56 +43,38 @@ var smart = angular.module('smart', ['ionic'])
                 }
             })
 
-            .state('snd', {
-                url : '/snd',
-                templateUrl : 'templates/snd-abstract.html',
+            .state('add', {
+                url : '/add',
+                templateUrl : 'templates/add-abstract.html',
                 abstract : true,
-                controller : 'SndController'
+                controller : 'AddController'
             })
-            .state('snd.home', {
-                url: '/home',
+
+        .state('add.device', {
+                url : '/add-device',
                 views: {
-                    'snd': {
-                        templateUrl: 'templates/snd-home.html',
-                        controller : 'SndHomePageController'
+                    'add': {
+                        templateUrl : 'templates/add-device.html',
+                        controller : 'AddDeviceController'
                     }
                 }
+
             })
-            .state('snd.chat', {
-                url: '/chat',
-                views: {
-                    'snd': {
-                        templateUrl: 'templates/snd-chat.html',
-                        controller : 'SndChatPageController'
+        .state('add.sensor', {
+                url : '/add-sensor',
+            views: {
+                    'add': {
+                        templateUrl : 'templates/add-sensor.html',
+                controller : 'AddSensorController'
                     }
                 }
+
             })
-            .state('snd.chat-single', {
-              url: '/chat-single',
-              views: {
-                'snd': {
-                  templateUrl: 'templates/snd-chat-single.html',
-                  controller : 'SndChatSinglePageController'
-                }
-              }
-            })
-            .state('snd.drink', {
-                url: '/drink',
-                views: {
-                    'snd': {
-                        templateUrl: 'templates/snd-drink.html',
-                        controller : 'SndDrinkPageController'
-                    }
-                }
-            })
-            .state('snd.policy', {
-                url: '/policy',
-                views: {
-                    'snd': {
-                        templateUrl: 'templates/snd-policy.html',
-                        controller : 'SndPolicyPageController'
-                    }
-                }
+
+        .state('map', {
+                url : '/map',
+                templateUrl : 'templates/map.html',
+                controller : 'MapController'
             })
 
         $urlRouterProvider.otherwise('/root');
